@@ -41,7 +41,7 @@ python3 scripts/douyin_whisper.py "https://v.douyin.com/ih8cJfV/"
 
 # 测试 YouTube
 yt-dlp --write-sub --write-auto-sub --sub-lang en \
-  --skip-download -o "/tmp/yt/test" "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  --skip-download -o "/tmp/yt/test" "https://www.youtube.com/watch?v=Ru3XdPCm0Zk"
 ```
 
 ## 文档

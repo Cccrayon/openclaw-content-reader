@@ -18,7 +18,7 @@ python -c "import whisper; print('OK')"  # 应显示 OK
 yt-dlp --write-sub --write-auto-sub --sub-lang en \
   --skip-download \
   -o "/tmp/yt/test" \
-  "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  "https://www.youtube.com/watch?v=Ru3XdPCm0Zk"
 ```
 
 ### 第 3 分钟：测试抖音
