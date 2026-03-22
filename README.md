@@ -37,7 +37,7 @@ bash scripts/install.sh
 
 ```bash
 # 测试抖音
-python3 scripts/douyin_whisper.py "https://v.douyin.com/ih8cJfV/"
+python3 scripts/douyin_whisper.py "https://v.douyin.com/XOK_H3t9n38/"
 
 # 测试 YouTube
 yt-dlp --write-sub --write-auto-sub --sub-lang en \

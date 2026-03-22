@@ -131,7 +131,7 @@ main() {
     echo "======================================"
     echo ""
     echo "下一步："
-    echo "  1. 运行测试: python3 scripts/douyin_whisper.py \"https://v.douyin.com/ih8cJfV/\""
+    echo "  1. 运行测试: python3 scripts/douyin_whisper.py \"https://v.douyin.com/XOK_H3t9n38/\""
     echo "  2. 查看文档: docs/quickstart.md"
     echo ""
 }
