@@ -58,7 +58,7 @@ print(result['text'])
 ```
 
 ```bash
-python3 scripts/douyin_whisper.py "https://v.douyin.com/xxx/"
+python3 scripts/douyin_whisper.py "https://v.douyin.com/ih8cJfV/"
 
 # 参数
 # -m, --model: Whisper 模型 (tiny/base/small/medium) [默认: base]

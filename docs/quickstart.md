@@ -25,7 +25,7 @@ yt-dlp --write-sub --write-auto-sub --sub-lang en \
 
 ```bash
 # 运行抖音脚本
-python3 scripts/douyin_whisper.py "https://v.douyin.com/xxx/"
+python3 scripts/douyin_whisper.py "https://v.douyin.com/ih8cJfV/"
 ```
 
 ### 第 4 分钟：开始使用
@@ -70,7 +70,7 @@ print(result['text'])
 
 ```bash
 # 基本用法
-python3 scripts/douyin_whisper.py "https://v.douyin.com/xxx/"
+python3 scripts/douyin_whisper.py "https://v.douyin.com/ih8cJfV/"
 
 # 指定语言（中文视频）
 python3 scripts/douyin_whisper.py "URL" -l zh
