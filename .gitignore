@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# 环境
+.env
+venv/
+env/
+
+# 测试
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 临时文件
+/tmp/
+*.mp4
+*.mp3
+*.wav
+*.vtt
+*.txt
+
+# macOS
+.DS_Store
+*.icloud
+
+# IDE
+.vscode/
+.idea/
+
+# Whisper 模型缓存
+.cache/

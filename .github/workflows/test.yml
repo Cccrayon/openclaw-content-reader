@@ -1,0 +1,82 @@
+name: Test Content Reader
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pytest pytest-asyncio
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt update
+          sudo apt install -y ffmpeg
+
+      - name: Test YouTube subtitle download
+        run: |
+          # Test with a short video
+          yt-dlp --list-subs "https://www.youtube.com/watch?v=dQw4w9WgXcQ" || true
+
+      - name: Test Douyin script syntax
+        run: |
+          python3 -m py_compile scripts/douyin_whisper.py
+          
+      - name: Test Whisper import
+        run: |
+          python3 -c "import whisper; print('Whisper OK')"
+
+      - name: Test requests import
+        run: |
+          python3 -c "import requests; print('Requests OK')"
+          
+      - name: Test yt-dlp import
+        run: |
+          python3 -c "import yt_dlp; print('yt-dlp OK')"
+
+  test-macos:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Homebrew packages
+        run: |
+          brew install ffmpeg yt-dlp
+
+      - name: Install Python dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Test Douyin script
+        run: |
+          python3 -m py_compile scripts/douyin_whisper.py
+
+      - name: Test YouTube
+        run: |
+          yt-dlp --list-subs "https://www.youtube.com/watch?v=dQw4w9WgXcQ" || true
