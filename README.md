@@ -13,6 +13,19 @@
 
 ## 快速安装
 
+### 一键安装（推荐）
+
+```bash
+# 克隆仓库
+git clone https://github.com/Cccrayon/openclaw-content-reader.git
+cd openclaw-content-reader
+
+# 运行安装脚本（自动检查并安装依赖）
+bash scripts/install.sh
+```
+
+### 手动安装
+
 ```bash
 # 1. 安装 Python 依赖
 pip install -r requirements.txt
